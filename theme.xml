@@ -12,7 +12,7 @@
 
 	<!-- "next singer" title.. -->
 	<panel x="+0" y="+0" visibility="has_karaoke_next">
-		<square color="black" visibility="40%" radius="10">
+		<square color="black" visibility="50%" radius="10">
 			<pos x="+0" y="+0"/>
 			<size width="800" height="70" />
 		</square>
@@ -25,7 +25,7 @@
 
 	<!-- first singer -->
 	<panel x="+0" y="+70+20" visibility="has_karaoke_next">
-		<square color="black" visibility="40%" radius="10">
+		<square color="black" visibility="50%" radius="10">
 			<pos x="+0" y="+0"/>
 			<size width="800" height="100" />
 		</square>
@@ -60,7 +60,7 @@
 
 	<!-- 2nd singer -->
 	<panel x="+0" y="+70+20+120" visibility="has_karaoke_next 1">
-		<square color="black" visibility="40%" radius="10">
+		<square color="black" visibility="50%" radius="10">
 			<pos x="+0" y="+0"/>
 			<size width="800" height="100" />
 		</square>
@@ -95,7 +95,7 @@
 
 	<!-- 3rd singer -->
 	<panel x="+0" y="+70+20+120+120" visibility="has_karaoke_next 2">
-		<square color="black" visibility="40%" radius="10">
+		<square color="black" visibility="50%" radius="10">
 			<pos x="+0" y="+0"/>
 			<size width="800" height="100" />
 		</square>
@@ -131,7 +131,7 @@
 
 	<!-- 4th singer -->
 	<panel x="+0" y="+70+20+120+120+120" visibility="has_karaoke_next 3">
-		<square color="black" visibility="40%" radius="10">
+		<square color="black" visibility="50%" radius="10">
 			<pos x="+0" y="+0"/>
 			<size width="800" height="100" />
 		</square>
