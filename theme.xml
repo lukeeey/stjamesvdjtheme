@@ -1,0 +1,242 @@
+<skin name="Karaoke OSD 1 (dark right)" version="8" width="1920" height="1080" breaklineV="1" comment="Next singer list display" author="Atomix Productions" preview="preview.png" karaoke="true" image="dummy.png">
+  <copyright>(c)2018 - Atomix Productions</copyright>
+
+	<font name="Helvetica" />
+
+
+<!--  when karaoke is enabled and not playing  -->
+<panel visibility="is_karaoke_idle"  x="1920-800-200" y="260">
+
+
+	<!-- Singers List-->
+
+	<!-- "next singer" title.. -->
+	<panel x="+0" y="+0" visibility="has_karaoke_next">
+		<square color="black" visibility="40%" radius="10">
+			<pos x="+0" y="+0"/>
+			<size width="800" height="70" />
+		</square>
+		<textzone>
+			<pos x="+15" y="+10"/>
+			<size width="800-20" height="50" />
+			<text size="50" weight="bold" color="#e2e2e2" text="NEXT SINGER" />
+		</textzone>
+	</panel>
+
+	<!-- first singer -->
+	<panel x="+0" y="+70+20" visibility="has_karaoke_next">
+		<square color="black" visibility="40%" radius="10">
+			<pos x="+0" y="+0"/>
+			<size width="800" height="100" />
+		</square>
+		<textzone>
+			<pos x="+20" y="+20"/>
+			<size width="60" height="60" />
+			<text size="60" color="#e2e2e2" text="#1" />
+		</textzone>
+		<textzone group="horizontal" visibility="get_next_karaoke_song 'singer'">
+			<pos x="+15+70+25" y="+10"/>
+			<size width="800-15-70-25-25" height="40" />
+			<text size="40" color="white" weight="bold" action="get_next_karaoke_song 'singer' &amp; param_uppercase" />
+		</textzone>
+		<textzone group="horizontal" visibility="get_next_karaoke_song 'singer' &amp; param_equal '' ? true : false ">
+			<pos x="+15+70+25" y="+10"/>
+			<size width="800-15-70-25-25" height="40" />
+			<text size="40" color="white" weight="bold" text="Unknown Singer" />
+		</textzone>
+		<textzone group="horizontal" >
+			<pos x="+15+70+25" y="+15+40"/>
+			<size width="80" height="35" />
+			<text size="35" color="#aaaaaa" text="Song:" />
+		</textzone>
+		<textzone group="horizontal" scroll="no">
+			<pos x="+15+70+25+90" y="+15+40"/>
+			<size width="800-15-70-25-25-90" height="35" />
+			<text size="35" color="#e2e2e2" action="get_next_karaoke_song 'artist'" />
+			<text size="35" color="#e2e2e2" action="get_artist_title_separator" />
+			<text size="35" color="#e2e2e2" action="get_next_karaoke_song 'title'" />
+		</textzone>
+	</panel>	
+
+	<!-- 2nd singer -->
+	<panel x="+0" y="+70+20+120" visibility="has_karaoke_next 1">
+		<square color="black" visibility="40%" radius="10">
+			<pos x="+0" y="+0"/>
+			<size width="800" height="100" />
+		</square>
+		<textzone>
+			<pos x="+20" y="+20"/>
+			<size width="60" height="60" />
+			<text size="60" color="#e2e2e2" text="#2" />
+		</textzone>
+		<textzone group="horizontal" visibility="get_next_karaoke_song 'singer' 1">
+			<pos x="+15+70+25" y="+10"/>
+			<size width="800-15-70-25-25" height="40" />
+			<text size="40" color="white" weight="bold" action="get_next_karaoke_song 'singer' 1 &amp; param_uppercase"  />
+		</textzone>
+		<textzone group="horizontal" visibility="get_next_karaoke_song 'singer' 1 &amp; param_equal '' ? true : false ">
+			<pos x="+15+70+25" y="+10"/>
+			<size width="800-15-70-25-25" height="40" />
+			<text size="40" color="white" weight="bold" text="Unknown Singer" />
+		</textzone>
+		<textzone group="horizontal" >
+			<pos x="+15+70+25" y="+15+40"/>
+			<size width="80" height="35" />
+			<text size="35" color="#aaaaaa" text="Song:" />
+		</textzone>
+		<textzone group="horizontal" scroll="no">
+			<pos x="+15+70+25+90" y="+15+40"/>
+			<size width="800-15-70-25-25-90" height="35" />
+			<text size="35" color="#e2e2e2" action="get_next_karaoke_song 'artist' 1" />
+			<text size="35" color="#e2e2e2" action="get_artist_title_separator" />
+			<text size="35" color="#e2e2e2" action="get_next_karaoke_song 'title' 1" />
+		</textzone>
+	</panel>		
+
+	<!-- 3rd singer -->
+	<panel x="+0" y="+70+20+120+120" visibility="has_karaoke_next 2">
+		<square color="black" visibility="40%" radius="10">
+			<pos x="+0" y="+0"/>
+			<size width="800" height="100" />
+		</square>
+		<textzone>
+			<pos x="+20" y="+20"/>
+			<size width="60" height="60" />
+			<text size="60" color="#e2e2e2" text="#3" />
+		</textzone>
+		<textzone group="horizontal" visibility="get_next_karaoke_song 'singer' 2">
+			<pos x="+15+70+25" y="+10"/>
+			<size width="800-15-70-25-25" height="40" />
+			<text size="40" color="white" weight="bold" action="get_next_karaoke_song 'singer' 2  &amp; param_uppercase" />
+		</textzone>
+		<textzone group="horizontal" visibility="get_next_karaoke_song 'singer' 2 &amp; param_equal '' ? true : false ">
+			<pos x="+15+70+25" y="+10"/>
+			<size width="800-15-70-25-25" height="40" />
+			<text size="40" color="white" weight="bold" text="Unknown Singer" />
+		</textzone>
+		<textzone group="horizontal" >
+			<pos x="+15+70+25" y="+15+40"/>
+			<size width="80" height="35" />
+			<text size="35" color="#aaaaaa" text="Song:" />
+		</textzone>
+		<textzone group="horizontal" scroll="no">
+			<pos x="+15+70+25+90" y="+15+40"/>
+			<size width="800-15-70-25-25-90" height="35" />
+			<text size="35" color="#e2e2e2" action="get_next_karaoke_song 'artist' 2" />
+			<text size="35" color="#e2e2e2" action="get_artist_title_separator" />
+			<text size="35" color="#e2e2e2" action="get_next_karaoke_song 'title' 2" />
+		</textzone>
+	</panel>	
+
+
+	<!-- 4th singer -->
+	<panel x="+0" y="+70+20+120+120+120" visibility="has_karaoke_next 3">
+		<square color="black" visibility="40%" radius="10">
+			<pos x="+0" y="+0"/>
+			<size width="800" height="100" />
+		</square>
+		<textzone>
+			<pos x="+20" y="+20"/>
+			<size width="60" height="60" />
+			<text size="60" color="#e2e2e2" text="#4" />
+		</textzone>
+		<textzone group="horizontal" visibility="get_next_karaoke_song 'singer' 3">
+			<pos x="+15+70+25" y="+10"/>
+			<size width="800-15-70-25-25" height="40" />
+			<text size="40" color="white" weight="bold" action="get_next_karaoke_song 'singer' 3  &amp; param_uppercase" />
+		</textzone>
+		<textzone group="horizontal" visibility="get_next_karaoke_song 'singer' 3 &amp; param_equal '' ? true : false ">
+			<pos x="+15+70+25" y="+10"/>
+			<size width="800-15-70-25-25" height="40" />
+			<text size="40" color="white" weight="bold" text="Unknown Singer" />
+		</textzone>
+		<textzone group="horizontal" >
+			<pos x="+15+70+25" y="+15+40"/>
+			<size width="80" height="35" />
+			<text size="35" color="#aaaaaa" text="Song:" />
+		</textzone>
+		<textzone group="horizontal" scroll="no">
+			<pos x="+15+70+25+90" y="+15+40"/>
+			<size width="800-15-70-25-25-90" height="35" />
+			<text size="35" color="#e2e2e2" action="get_next_karaoke_song 'artist' 3" />
+			<text size="35" color="#e2e2e2" action="get_artist_title_separator" />
+			<text size="35" color="#e2e2e2" action="get_next_karaoke_song 'title' 3" />
+		</textzone>
+	</panel>	
+	
+</panel>
+	
+
+
+
+<!--  when karaoke is idle and background music is on  -->
+<panel visibility="get_karaoke_background_song 'title' &amp; param_equal '' ? get_karaoke_background_song 'artist' &amp; param_equal '' ?  false : true"  x="1920-800-200" y="300">
+
+	<!-- background music  -->
+	<group x="+0" y="900">
+		<textzone canstretch="true">
+			<pos x="+15" y="-25-10"/>
+			<size width="800-20" height="25" />
+			<text size="25" weight="bold" color="#e2e2e2" text="Now Playing ..." />
+		</textzone>
+
+		<square color="#000000" visibility="40%" radius="10" canstretch="true"> 
+			<pos x="+0" y="+0"/>
+			<size width="800" height="100"/>
+		</square>
+		<cover source="karaokebackground" canstretch="true" >
+			<pos x="+15" y="+15"/>
+			<size width="70" height="70" />
+		</cover>
+		<textzone group="horizontal" canstretch="true" scroll="true">
+			<pos x="+15+70+25" y="+33"/>
+			<size width="800-70-30-30" height="35" />
+			<text size="35" color="#e2e2e2" weight="normal" action="get_karaoke_background_song 'artist'"/>
+			<text size="35" color="#e2e2e2" weight="normal" text=" - "/>
+			<text size="35" color="#e2e2e2" weight="bold" action="get_karaoke_background_song 'title'"/>
+			<!-- <text size="35" color="#e2e2e2" weight="normal" text=" "/>
+			<text size="35" color="#aaaaaa" weight="normal" action="get_karaoke_background_song 'remix'"/> -->
+		</textzone>	
+
+		<equalizer type="bar" nb="64" color="white" deck="master" width="0.4" slow="true" bass="middle" mirror="false" canstretch="true" visibility="50%">
+			<pos x="+10" y="+100+10"/>
+			<size width="780" height="25" />
+		</equalizer>
+
+	</group>	
+</panel>
+
+<!--  next singer scroll,  when karaoke is playing  -->
+<panel visibility="is_karaoke_idle ? false : true"  x="0" y="0">
+
+		<square color="black" visibility="50%" radius="10" canstretch="true"> 
+			<pos x="0" y="0"/>
+			<size width="1980" height="100"/>
+		</square>
+
+		<textzone group="horizontal" scroll="yes" canstretch="false">
+			<pos x="+20" y="+15"/>
+			<size width="1920-40" height="70" />
+
+			<text size="70" color="white" weight="" format="Next : " />
+
+			<text size="70" color="white" weight="" format=" 1. " />
+			<text size="70" color="white" weight="bold" action="get_next_karaoke_song 'singer' 1 &amp; not param_equal '' ? get_next_karaoke_song 'singer' 1 &amp; param_uppercase : get_text 'Unknown Singer'"/>
+
+			<text size="70" color="white" weight="" format="  |  2. " />
+			<text size="70" color="white" weight="bold" action="get_next_karaoke_song 'singer' 2 &amp; not param_equal '' ? get_next_karaoke_song 'singer' 2 &amp; param_uppercase : get_text 'Unknown Singer'"/>
+
+			<text size="70" color="white" weight="" format="  |  3. " />
+			<text size="70" color="white" weight="bold" action="get_next_karaoke_song 'singer' 3 &amp; not param_equal '' ? get_next_karaoke_song 'singer' 3 &amp; param_uppercase : get_text 'Unknown Singer'"/>
+
+		</textzone>
+
+</panel>	
+
+
+	<logo visibility="not has_logo 'videoskin'">
+		<pos x="1920-32-172" y="32"/>
+		<size width="172" height="43" />
+	</logo>
+	
+</skin>
