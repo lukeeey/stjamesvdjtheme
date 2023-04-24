@@ -223,10 +223,10 @@
 			<text size="70" color="white" weight="" action="get_next_karaoke_song 'singer' 1 &amp; not param_equal '' ? get_text ' 1. ' : get_text '' " />
 			<text size="70" color="white" weight="bold" action="get_next_karaoke_song 'singer' 1 &amp; not param_equal '' ? get_next_karaoke_song 'singer' 1 &amp; param_uppercase : get_text ''" />
 
-			<text size="70" color="white" weight="" action="get_next_karaoke_song 'singer' 2 &amp; not param_equal '' ? get_text '  2. |  ' : get_text '' " />
+			<text size="70" color="white" weight="" action="get_next_karaoke_song 'singer' 2 &amp; not param_equal '' ? get_text '  |  2. ' : get_text '' " />
 			<text size="70" color="white" weight="bold" action="get_next_karaoke_song 'singer' 2 &amp; not param_equal '' ? get_next_karaoke_song 'singer' 2 &amp; param_uppercase : get_text ''"/>
 
-			<text size="70" color="white" weight="" action="get_next_karaoke_song 'singer' 3 &amp; not param_equal '' ? get_text '  3. |  ' : get_text '' " />
+			<text size="70" color="white" weight="" action="get_next_karaoke_song 'singer' 3 &amp; not param_equal '' ? get_text '  |  3. ' : get_text '' " />
 			<text size="70" color="white" weight="bold" action="get_next_karaoke_song 'singer' 3 &amp; not param_equal '' ? get_next_karaoke_song 'singer' 3 &amp; param_uppercase : get_text ''"/>
 		</textzone>
 
